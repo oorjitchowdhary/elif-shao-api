@@ -4,7 +4,7 @@ const axios = require("axios");
 
 // Initiate GitHub authentication
 router.get('/auth/github', (_, res) => {
-    return res.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_APP_CLIENT_ID}&redirect_uri=http://localhost:3000/auth/github/callback`);
+    return res.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_APP_CLIENT_ID}&redirect_uri=${process.env.GITHUB_CALLBACK_URI}`);
 });
 
 // GitHub auth callback
